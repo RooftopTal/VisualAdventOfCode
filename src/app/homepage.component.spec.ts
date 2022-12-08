@@ -1,13 +1,16 @@
 import { TestBed } from '@angular/core/testing';
+import { Component, Input } from '@angular/core';
 import { HomepageComponent } from './homepage.component';
 
+
 describe('HomepageComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       declarations: [
-        HomepageComponent
-      ],
-    }).compileComponents();
+        HomepageComponent,
+        WindowCompontentStub
+      ]
+    });
   });
 
   it('should create the app', () => {
@@ -16,16 +19,26 @@ describe('HomepageComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'VisualAdventOfCode'`, () => {
+  it(`should have as title 'Visual Advent of Code'`, () => {
     const fixture = TestBed.createComponent(HomepageComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('VisualAdventOfCode');
+    expect(app.title).toEqual('Visual Advent of Code');
   });
 
-  it('should render title', () => {
+  it('should render page details', () => {
     const fixture = TestBed.createComponent(HomepageComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('VisualAdventOfCode app is running!');
+    expect(compiled.querySelector('.content p')?.textContent).toContain('This page will act as a tool to display all of my Advent of Code results.');
   });
+
+  @Component({
+    selector: 'aoc-window',
+    template: ''
+  })
+  class WindowCompontentStub {
+    @Input() year: number = 0;
+    @Input() day: number = 0;
+  }
 });
+ 
