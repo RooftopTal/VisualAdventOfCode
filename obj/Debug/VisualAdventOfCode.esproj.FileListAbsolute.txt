@@ -1,0 +1,2 @@
+C:\work\VisualAdventOfCode\VisualAdventOfCode\obj\Debug\VisualAdventOfCode.esproj.SuggestedBindingRedirects.cache
+C:\work\VisualAdventOfCode\VisualAdventOfCode\obj\Debug\VisualAdventOfCode.esproj.CoreCompileInputs.cache

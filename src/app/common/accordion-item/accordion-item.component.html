@@ -1,0 +1,27 @@
+<cdk-accordion-item #itemName="cdkAccordionItem"
+                    class="example-accordion-item"
+                    role="button"
+                    tabindex="0"
+                    [attr.id]="'accordion-header-' + itemName"
+                    [attr.aria-expanded]="itemName.expanded"
+                    [attr.aria-controls]="'accordion-body-' + itemName">
+  <div class="example-accordion-item-header" (click)="itemName.toggle()">
+    <div>
+      {{ itemLabel }}
+    </div>
+    <span class="example-accordion-item-description">
+      Click to {{ itemName.expanded ? 'close' : 'open' }}
+    </span>
+  </div>
+  <div class="example-accordion-item-body"
+       role="region"
+       [style.display]="itemName.expanded ? '' : 'none'"
+       [attr.id]="'accordion-body-' + itemName"
+       [attr.aria-labelledby]="'accordion-header-' + itemName">
+
+    <div>
+      {{ itemContent }}
+    </div>
+
+    </div>
+</cdk-accordion-item>

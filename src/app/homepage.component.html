@@ -1,0 +1,32 @@
+<h1 id="tableLabel">{{ title }}</h1>
+
+<p>This page will act as a tool to display all of my Advent of Code results.</p>
+
+<cdk-accordion class="aoc-accordion">
+  <aoc-accordion-item [itemName]="'three'"
+                      [itemLabel]="testLabel"
+                      [itemContent]="testContent"></aoc-accordion-item>
+</cdk-accordion>
+
+<div>
+  <aoc-window class="aoc-window"
+              [year]="2021"
+              [day]="1">
+  </aoc-window>
+  <aoc-window class="aoc-window"
+              [year]="2021"
+              [day]="2">
+  </aoc-window>
+  <aoc-window class="aoc-window"
+              [year]="2022"
+              [day]="1">
+  </aoc-window>
+  <aoc-window class="aoc-window"
+              [year]="2022"
+              [day]="2">
+  </aoc-window>
+  <aoc-window class="aoc-window"
+              [year]="2022"
+              [day]="3">
+  </aoc-window>
+</div>

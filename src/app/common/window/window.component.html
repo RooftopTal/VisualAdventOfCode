@@ -1,0 +1,7 @@
+<div class="aoc-window">
+  <button *ngIf="!isOpen" (click)="open()">{{ day }}</button>
+  <div *ngIf="isOpen">
+    <div *ngIf="aocResponse">{{ aocResponse.answer }}</div>
+    <div *ngIf="!aocResponse">Loading answer...</div>
+  </div>
+</div>
