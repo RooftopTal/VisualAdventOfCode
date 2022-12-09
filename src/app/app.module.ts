@@ -5,14 +5,12 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import { HomepageComponent } from './homepage.component';
 import { MaterialModule } from '../material.module';
-import { AccordionItemComponent } from './common/accordion-item/accordion-item.component';
 import { config } from 'rxjs';
 import { WindowComponent } from './common/window/window.component';
 
 @NgModule({
   declarations: [
     HomepageComponent,
-    AccordionItemComponent,
     WindowComponent
   ],
   imports: [

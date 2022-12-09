@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { environment } from './../../environment';
 import { AOCResponse } from './aoc-response';
-import { AOCService } from './window.service';
+import { WindowService } from './window.service';
 
 @Component({
   selector: 'aoc-window',
@@ -14,19 +14,19 @@ export class WindowComponent {
   aocResponse?: AOCResponse | undefined;
   isOpen: boolean = false;
 
-  constructor(private aocService: AOCService) {  }
+  constructor(private aocService: WindowService) {  }
 
   open() {
-    this.getAOCResponse();
     this.isOpen = true;
+    this.getAOCResponse();
   }
 
   getAOCResponse() {
     let callPath = environment.aocPath + '/' + this.year + '/' + this.day
 
     this.aocService.getAOCAnswer(callPath)
-      .subscribe(resp => {
-        this.aocResponse = { ...resp.body! };
+      .subscribe(aocResponse => {
+        this.aocResponse = aocResponse;
       }, error => {
         console.error(error);
         this.aocResponse = { answer: 'Failed' }

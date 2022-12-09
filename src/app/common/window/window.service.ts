@@ -11,11 +11,11 @@ import { AOCResponse } from './aoc-response';
 @Injectable({
   providedIn: 'root',
 })
-export class AOCService {
+export class WindowService {
   constructor(private http: HttpClient) { }
 
-  getAOCAnswer(path: string): Observable<HttpResponse<AOCResponse>> {
-    return this.http.get<AOCResponse>(
-      environment.apiUrl + ':' + environment.apiPort + '/' + path, { observe: 'response' });
+  getAOCAnswer(path: string): Observable<AOCResponse> {
+    const fullPath = environment.apiUrl + ':' + environment.apiPort + '/' + path;
+    return this.http.get<AOCResponse>(fullPath, { observe: 'body' });
   }
 }

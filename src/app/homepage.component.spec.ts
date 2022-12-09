@@ -28,8 +28,11 @@ describe('HomepageComponent', () => {
   it('should render page details', () => {
     const fixture = TestBed.createComponent(HomepageComponent);
     fixture.detectChanges();
+
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content p')?.textContent).toContain('This page will act as a tool to display all of my Advent of Code results.');
+    const pSection = compiled.querySelector('p');
+
+    expect(pSection?.textContent).toContain('This page will act as a tool to display all of my Advent of Code results.');
   });
 
   @Component({
