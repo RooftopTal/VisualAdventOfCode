@@ -6,7 +6,7 @@ import { WindowService } from './window.service';
 @Component({
   selector: 'aoc-window',
   templateUrl: './window.component.html',
-  styleUrls: ['./window.component.css']
+  styleUrls: ['./window.component.scss']
 })
 export class WindowComponent {
   @Input() year: number = 0;

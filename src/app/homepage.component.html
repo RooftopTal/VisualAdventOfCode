@@ -2,25 +2,10 @@
 
 <p>This page will act as a tool to display all of my Advent of Code results.</p>
 
-<div>
-  <aoc-window class="aoc-window"
-              [year]="2021"
-              [day]="1">
-  </aoc-window>
-  <aoc-window class="aoc-window"
-              [year]="2021"
-              [day]="2">
-  </aoc-window>
-  <aoc-window class="aoc-window"
-              [year]="2022"
-              [day]="1">
-  </aoc-window>
-  <aoc-window class="aoc-window"
-              [year]="2022"
-              [day]="2">
-  </aoc-window>
-  <aoc-window class="aoc-window"
-              [year]="2022"
-              [day]="3">
-  </aoc-window>
+<div class="window-wrap">
+  <div class="window-place" *ngFor="let day of showDays">
+    <aoc-window [year]="showYear"
+                [day]="day">
+    </aoc-window>
+  </div>
 </div>
