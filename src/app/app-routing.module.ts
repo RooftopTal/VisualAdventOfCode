@@ -4,13 +4,25 @@ import { CalendarComponent } from './common/calendar/calendar.component';
 import { DashboardComponent } from './common/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/calendar/2022', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'calendar/:year', component: CalendarComponent }
+  {
+    path: '',
+    redirectTo: '/calendar/2022',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: 'calendar/:year',
+    component: CalendarComponent
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    onSameUrlNavigation: 'reload'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
