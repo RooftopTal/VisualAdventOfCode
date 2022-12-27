@@ -1,11 +1,15 @@
 
-.window-wrap {
-  display: flex;
-  flex-wrap: wrap;
+
+.app-sidenav {
+  width: 15%;
 }
 
-.window-place {
-  height: 100px;
-  flex: 0 0 17%;
-  padding: 5px;
+.app-main-display {
+  height: 100%;
+}
+
+.app-router-content {
+  display: block;
+  padding-left: 40px;
+  padding-right: 40px;
 }

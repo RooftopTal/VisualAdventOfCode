@@ -1,0 +1,9 @@
+<h1 id="tableLabel">{{ title }}</h1>
+
+<div class="window-wrap">
+  <div class="window-place" *ngFor="let day of showDays">
+    <aoc-window [year]="showYear"
+                [day]="day">
+    </aoc-window>
+  </div>
+</div>

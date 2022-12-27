@@ -1,11 +1,18 @@
-<h1 id="tableLabel">{{ title }}</h1>
 
-<p>This page will act as a tool to display all of my Advent of Code results.</p>
+<mat-sidenav-container class="app-main-display">
+  <mat-sidenav #sidenav mode="side" opened class="app-sidenav">
+    <mat-nav-list>
 
-<div class="window-wrap">
-  <div class="window-place" *ngFor="let day of showDays">
-    <aoc-window [year]="showYear"
-                [day]="day">
-    </aoc-window>
-  </div>
-</div>
+      <a mat-list-item [routerLink]="'/dashboard'"> Dashboard </a>
+      <a mat-list-item [routerLink]="'/calendar/2021'"> 2021 </a>
+      <a mat-list-item [routerLink]="'/calendar/2022'"> 2022 </a>
+      <a mat-list-item [routerLink]="'/calendar/2023'"> 2023 (future) </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="app-router-content">
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
