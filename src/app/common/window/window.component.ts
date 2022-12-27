@@ -9,8 +9,17 @@ import { WindowService } from './window.service';
   styleUrls: ['./window.component.scss']
 })
 export class WindowComponent {
-  @Input() year: number = 0;
-  @Input() day: number = 0;
+  @Input() set year(year: number) {
+    this.internalYear = year;
+    this.isOpen = false;
+    this.aocResponse = undefined;
+  }
+  internalYear: number = 0;
+  @Input() set day(day: number) {
+    this.internalDay = day;
+  }
+  internalDay: number = 0;
+
   aocResponse?: AOCResponse | undefined;
   isOpen: boolean = false;
 
@@ -22,7 +31,7 @@ export class WindowComponent {
   }
 
   getAOCResponse() {
-    let callPath = environment.aocPath + '/' + this.year + '/' + this.day
+    let callPath = environment.aocPath + '/' + this.internalYear + '/' + this.internalDay
 
     this.aocService.getAOCAnswer(callPath)
       .subscribe(aocResponse => {
