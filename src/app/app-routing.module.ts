@@ -4,7 +4,7 @@ import { CalendarComponent } from './common/calendar/calendar.component';
 import { DashboardComponent } from './common/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/calendar/2022', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'calendar/:year', component: CalendarComponent }
 ];
