@@ -5,8 +5,11 @@
   justify-content: space-around;
   align-items: center;
   align-content: space-around;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .aoc-window > button {
@@ -16,7 +19,6 @@
   border-style: outset;
   background: none;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: bolder;
 }
-
