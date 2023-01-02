@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from './environment';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent {
+  title = environment.appName;
 }

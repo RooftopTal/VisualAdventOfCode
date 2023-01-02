@@ -1,5 +1,5 @@
 <div class="aoc-window">
-  <button id="windowClosed" *ngIf="!isOpen" (click)="open()">{{ internalDay }}</button>
+  <button mat-raised-button extended id="windowClosed" *ngIf="!isOpen" (click)="open()">{{ internalDay }}</button>
   <div *ngIf="isOpen">
     <div class="window-answer" *ngIf="aocResponse">{{ aocResponse.answer }}</div>
     <div class="window-failure" *ngIf="!aocResponse">Loading answer...</div>
