@@ -10,7 +10,4 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\VisualAdventOfCode</BuildOutputFolder>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="src\environments\" />
-  </ItemGroup>
 </Project>

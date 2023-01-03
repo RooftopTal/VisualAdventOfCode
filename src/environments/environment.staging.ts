@@ -6,6 +6,6 @@ export const environment = {
   aocPath: 'AdventOfCode/Answer',
 
   // Specific
-  production: true,
-  apiUrl: 'https://api-advent-of-code.herokuapp.com/'
+  production: false,
+  apiUrl: 'http://localhost:8080'
 };
